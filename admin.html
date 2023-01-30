@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <form action="/admin/upl_questionnaire_upd" method="POST" enctype="multipart/form-data">
+    <h4>Upload New Questionnaire</h4>
+        <input type="file" name="jsonfile" /> <br><br>
+        <input type="submit" value="Upload File"/>
+    </form>
+
+<!--
+    <body>
+        <form method="POST">
+        <h4>Reset All</h4>
+            <input type="submit" value="Reset All"/>
+        </form>
+    </body>
+    <body>
+        <form action="uploading.php" method="POST" enctype="multipart/form-data">
+        <h4>Delete Responses</h4>
+            Question ID: <input type="text" name="qID" /> <br><br>
+            <input type="submit" value="Delete"/>
+        </form>
+    </body>
+</html>
+-->
+{% endblock %}
