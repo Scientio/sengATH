@@ -1,0 +1,43 @@
+{% extends "base.html"%}
+{% block title %}Analyze{% endblock %}
+{% block head %}Analyze Questions and Answers{% endblock %}
+
+{% block content %}
+    <form action="/questionnaire" method="POST">
+    <h4>Get Details of specific Questionnaire</h4>
+        <input id="questionnaireID" name="questionnaireID" /> <br><br>
+        <input type="submit" value="Get Details"/>
+    </form>
+
+    <form action="/admin/resetall" method="POST">
+    <h4>Clear Database</h4>
+        <input type="submit" value="Reset Database"/>
+    </form>
+
+    <form action="/admin/healthcheck" method="GET">
+    <h4>Check Connection to Database</h4>
+        <input type="submit" value="Healthcheck"/>
+    </form>
+
+    <form action="/admin/resetq/:questionnaireID" method="POST">
+    <h4>Delete All Answers to Selected Question ID</h4>
+        <input name="resetqID" /> <br><br>
+        <input type="submit" value="Delete Answers to this Question"/>
+    </form>
+<!--
+    <body>
+        <form method="POST">
+        <h4>Reset All</h4>
+            <input type="submit" value="Reset All"/>
+        </form>
+    </body>
+    <body>
+        <form action="uploading.php" method="POST" enctype="multipart/form-data">
+        <h4>Delete Responses</h4>
+            Question ID: <input type="text" name="qID" /> <br><br>
+            <input type="submit" value="Delete"/>
+        </form>
+    </body>
+</html>
+-->
+{% endblock %}
